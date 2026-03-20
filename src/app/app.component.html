@@ -185,9 +185,29 @@ form reference variables : used in form to access the form value and form state 
 <input type="text" #phone placeholder="Enter your phone"/>
 <button type="button" (click)="phoneclick(phone.value); phone.value=''">Phone Click</button>
 -->
+<!--SVG in angular
 <svg>
     <g>
         <rect x="0" y="0" width="100" height="100" [attr.fill]="svgcolor" (click)="changeColor()"></rect>
         <text x="200" y="50" text-anchor="middle" dominant-baseline="middle">click the rectangle</text>
     </g>
 </svg>
+-->
+<!-- Angular directives : directives are used to extend the functionality of HTML elements in Angular 
+
+<div>Angular directives : directives are used to extend the functionality of HTML elements in Angular </div>
+<br/>
+<span><strong>Directives List</strong></span>
+<ul>
+    <li>Component</li>
+    <li>Attributes:its change the behviour</li>
+    <li>Structural: its change the dom elements</li>
+</ul>
+
+<div>Build in directives</div>
+<div>NgClass: Add remove set of css classes, ngStyle : add or remove set of style, ngModel:Two way data binding</div>
+<div>build in structural directives 'if, for, switch' </div>
+-->
+
+<p appHighlight="yellow" defaultColor="blue">This is angular 18</p>
+<p ngNonBindable>{{1+1}}</p>

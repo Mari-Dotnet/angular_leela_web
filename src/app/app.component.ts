@@ -16,6 +16,7 @@ import { of } from 'rxjs';
 import { gridpipe } from './grid.pipe';
 import { lengthpipe } from './length.pipe';
 import { isactiveheroPipe } from './isactivehero.pipe';
+import { HighlightDirective } from './highlight.directive';
 
 @Component({
   selector: 'app-root',
@@ -23,7 +24,7 @@ import { isactiveheroPipe } from './isactivehero.pipe';
   imports: [RouterOutlet,profileComponents,hostcomponents,countercomponent,CommonModule,
             GetterinputComponent,PanelComponent,CardComponent,HoverClikComponent,
             LifecycleComponent,CheckedlifecycleComponent,BindingComponent,
-            ControlflowComponent,gridpipe,lengthpipe,isactiveheroPipe
+            ControlflowComponent,gridpipe,lengthpipe,isactiveheroPipe,HighlightDirective
           ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
