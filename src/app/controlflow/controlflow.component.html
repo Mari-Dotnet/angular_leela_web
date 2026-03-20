@@ -15,6 +15,40 @@
     <div>{{user}}</div>
   }
 }
-@for(item of items; track item) {
-  <div>{{item}}</div>
+
+<!--For loop 
+@for(item of items; track item ; let count = $count ;
+    let index= $index; let first = $first; let last = $last;
+    let even = $even; let odd = $odd) {
+  <div> value: {{item}}  </div>
+  <div>count: {{count}}</div>
+  <div>index: {{index}}</div>
+  <div>first: {{first}}</div>
+  <div>last: {{last}}</div>
+  <div>even: {{even}}</div>
+  <div>odd: {{odd}}</div>
+  <hr/>
 }
+-->
+
+<!--For loop with empty array-->
+@for(item of noitems; track item) {
+  <div> value: {{item}}  </div>
+} @empty  {
+  <div>No items found</div>
+}
+
+<!--switch statement-->
+<div>
+  @switch (userrole) {
+    @case ('admin') {
+      <div>Welcome Admin</div>
+    }
+    @case ('user') {
+      <div>Welcome User</div>
+    }
+    @default {
+      <div>Welcome Guest</div>
+    }
+  }
+</div>
