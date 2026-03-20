@@ -1,0 +1,13 @@
+<div>Angule lifecycle Hooks</div>
+<div>
+    <input type="text" #inputField>
+</div>
+
+<div #scrollcontainer class="scroll-container">  
+   @for(item of items; track item)
+   {
+    <div>{{item}}</div>
+   }
+
+</div>
+<button (click)="addItem()">Add Item</button>

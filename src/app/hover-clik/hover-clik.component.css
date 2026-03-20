@@ -1,0 +1,6 @@
+:host.hovered {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    background-color: blueviolet;
+}
