@@ -177,3 +177,10 @@ its called after the content is checked and also called after the content is  in
     <p>{{userdata.name}}</p>
 }
 -->
+
+<!--Template Reference Variables : used in input html
+Component reference variables : used in component 
+form reference variables : used in form to access the form value and form state like valid, invalid, dirty, pristine etc
+-->
+<input type="text" #phone placeholder="Enter your phone"/>
+<button type="button" (click)="phoneclick(phone.value); phone.value=''">Phone Click</button>

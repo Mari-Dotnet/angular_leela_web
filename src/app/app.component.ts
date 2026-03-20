@@ -65,4 +65,7 @@ export class AppComponent {
     this.user.push({ name: name.trim() ,isactive:isactive});
   }
 }
+phoneclick(value:string){
+console.log("Phone clicked with value:", value);
+}
 }
