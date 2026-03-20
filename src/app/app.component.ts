@@ -22,6 +22,8 @@ import { DynamiclistDirective } from './dynamiclist.directive';
 import { ShowifDirective } from './showif.directive';
 import { RepeatTimesDirective } from './repeat-times.directive';
 import { FormsModule, NgForm } from '@angular/forms';
+import { Animal, IsDogDirectiveDirective } from './is-dog-directive.directive';
+import { DemodirectiveDirective, demourl } from './demodirective.directive';
 
 @Component({
   selector: 'app-root',
@@ -30,12 +32,15 @@ import { FormsModule, NgForm } from '@angular/forms';
             GetterinputComponent,PanelComponent,CardComponent,HoverClikComponent,
             LifecycleComponent,CheckedlifecycleComponent,BindingComponent,
             ControlflowComponent,gridpipe,lengthpipe,isactiveheroPipe,HighlightDirective,HaspermissionDirective,DynamiclistDirective,
-            ShowifDirective,RepeatTimesDirective,FormsModule
+            ShowifDirective,RepeatTimesDirective,FormsModule,IsDogDirectiveDirective,DemodirectiveDirective
           ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+animal:Animal={name:"Tom",type:"dog",breed:"Golden Retriever"}; // Example animal object
+demostring="Hello from app component";
+demourlmodel:demourl={url:"https://www.example.com/video",video:true};
   isvisible=true;
   headertitle:string = 'angular';
   count:number=5;
@@ -85,4 +90,5 @@ const g = Math.floor(Math.random() * 256);
 const b = Math.floor(Math.random() * 256);
 this.svgcolor = `rgb(${r},${g},${b})`;
 }
+
 }
