@@ -11,15 +11,19 @@ import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { CheckedlifecycleComponent } from './checkedlifecycle/checkedlifecycle.component';
 import { BindingComponent } from './binding/binding.component';
 import { ControlflowComponent } from './controlflow/controlflow.component';
-
+import {CommonModule} from '@angular/common';
+import { of } from 'rxjs';
+import { gridpipe } from './grid.pipe';
+import { lengthpipe } from './length.pipe';
+import { isactiveheroPipe } from './isactivehero.pipe';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,profileComponents,hostcomponents,countercomponent,
+  imports: [RouterOutlet,profileComponents,hostcomponents,countercomponent,CommonModule,
             GetterinputComponent,PanelComponent,CardComponent,HoverClikComponent,
             LifecycleComponent,CheckedlifecycleComponent,BindingComponent,
-            ControlflowComponent
+            ControlflowComponent,gridpipe,lengthpipe,isactiveheroPipe
           ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
@@ -32,7 +36,13 @@ export class AppComponent {
   receivedStringFromChild='';
   showhook:boolean=true;
   fontsize=16;
-  user={name:"Marimuthu"}
+  user:[{name:string,isactive:boolean}]=[{name:"Marimuthu",isactive:true}];
+  birthdate=new Date();
+  userlist$=of([
+    {name:"Marimuthu",age:30,isactive:true},
+    {name:"Kumar",age:25,isactive:false},
+    {name:"Sundar",age:28,isactive:true}
+  ]);
   dataReceived(data:number){
  this.receivedDataFromChild=data;
   }
@@ -50,4 +60,9 @@ export class AppComponent {
   updateCounter(){
     this.count++;
   }
+ addHero(name: string, isactive: boolean) {
+  if (name.trim()) {
+    this.user.push({ name: name.trim() ,isactive:isactive});
+  }
+}
 }

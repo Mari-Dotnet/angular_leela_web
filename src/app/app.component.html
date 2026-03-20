@@ -129,6 +129,51 @@ its called after the content is checked and also called after the content is  in
 <!--Control FLow 
 <app-controlflow></app-controlflow>
 -->
-<!--local template variable-->
+<!--local template variable 
 @let username=user.name
 <div>{{username}}</div>
+-->
+<!--Pipes : Transform the data like string, number, date  etc
+| pipe operator
+{{name | uppercase}} => MARI
+{{name | lowercase}} => mari
+{{name | titlecase}} => Mari
+{{name | slice:0:3}} => Mar
+{{name | slice:3}} => imuthu
+{{name | slice:-5}} => muthu
+{{name | slice:-5:-2}} => mut
+{{name | slice:-5:-3}} => mu
+{{name | slice:-5:3}} => Mar
+{{name | slice:0:-3}} => Mari
+{{name | slice:0:-2}} => Marimuth
+{{name | slice:0:-1}} => Marimuthu
+
+<div> {{birthdate | date :"dd-MM-yyyy"}} </div>
+<div>{{"mari" | uppercase}}</div>
+<div>{{1234.6 | currency:"INR"}}</div>
+<div>{{1234.6 | number:"1.2-2"}}</div>
+
+<div>{{0.2545 | percent:"1.2-2"}}</div>
+
+<p>{{[12,3,4,55,67,45,6,656] | slice:1:5}}</p>
+<p>{{['a',"b","c","b"] | slice:1:3}}</p>
+<p>{{"hellow mari" | slice:0:6}}</p>
+<p> {{ {name:"Mari",age:29} | json }}</p>
+<p>{{userlist$ |async | json}}</p>
+
+<div>{{"mari" | grid}}</div>
+<div>{{['mari','ravi','suresh'] | lengthget}}</div>
+<div>{{"marimuthu" | lengthget}}</div>
+<div>{{[1,2,3,4,5] | lengthget}}</div>
+<div>{{ "This is correct way to use pipe in (condition ? a : b) | pipe"}}</div>
+-->
+
+<!--Change detection on pipe it will only active pure is false
+<label for="">New hero name</label>
+<input type="text" #box (keyup.enter)="addHero(box.value, active.checked); box.value=''" placeholder="Enter Hero Name"/>
+<label for="isactive">Active</label><input type="checkbox" #active id="isactive"/>
+
+@for (userdata of (user | isactivehero); track userdata.name) {
+    <p>{{userdata.name}}</p>
+}
+-->
