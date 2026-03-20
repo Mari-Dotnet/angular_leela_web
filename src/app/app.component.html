@@ -1,6 +1,3 @@
-<div>
-<div>Hi Mari</div>
-</div>
 <!--
 <app-getterinput [title1]="title"></app-getterinput>
 
@@ -129,5 +126,9 @@ its called after the content is checked and also called after the content is  in
 <div>size: {{ fontsize }}</div>
 <div [style.font-size.px]="fontsize">size: {{ fontsize }}</div>
 -->
-<!--Control FLow-->
+<!--Control FLow 
 <app-controlflow></app-controlflow>
+-->
+<!--local template variable-->
+@let username=user.name
+<div>{{username}}</div>

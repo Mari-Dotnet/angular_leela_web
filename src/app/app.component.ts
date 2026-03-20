@@ -32,6 +32,7 @@ export class AppComponent {
   receivedStringFromChild='';
   showhook:boolean=true;
   fontsize=16;
+  user={name:"Marimuthu"}
   dataReceived(data:number){
  this.receivedDataFromChild=data;
   }
