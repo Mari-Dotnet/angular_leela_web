@@ -43,6 +43,8 @@ export class AppComponent {
     {name:"Kumar",age:25,isactive:false},
     {name:"Sundar",age:28,isactive:true}
   ]);
+
+  svgcolor='rgb(255,0,0)';
   dataReceived(data:number){
  this.receivedDataFromChild=data;
   }
@@ -67,5 +69,11 @@ export class AppComponent {
 }
 phoneclick(value:string){
 console.log("Phone clicked with value:", value);
+}
+changeColor(){
+const r = Math.floor(Math.random() * 256);
+const g = Math.floor(Math.random() * 256);
+const b = Math.floor(Math.random() * 256);
+this.svgcolor = `rgb(${r},${g},${b})`;
 }
 }

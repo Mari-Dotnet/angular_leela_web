@@ -181,6 +181,13 @@ its called after the content is checked and also called after the content is  in
 <!--Template Reference Variables : used in input html
 Component reference variables : used in component 
 form reference variables : used in form to access the form value and form state like valid, invalid, dirty, pristine etc
--->
+
 <input type="text" #phone placeholder="Enter your phone"/>
 <button type="button" (click)="phoneclick(phone.value); phone.value=''">Phone Click</button>
+-->
+<svg>
+    <g>
+        <rect x="0" y="0" width="100" height="100" [attr.fill]="svgcolor" (click)="changeColor()"></rect>
+        <text x="200" y="50" text-anchor="middle" dominant-baseline="middle">click the rectangle</text>
+    </g>
+</svg>
