@@ -17,6 +17,11 @@ import { gridpipe } from './grid.pipe';
 import { lengthpipe } from './length.pipe';
 import { isactiveheroPipe } from './isactivehero.pipe';
 import { HighlightDirective } from './highlight.directive';
+import { HaspermissionDirective } from './haspermission.directive';
+import { DynamiclistDirective } from './dynamiclist.directive';
+import { ShowifDirective } from './showif.directive';
+import { RepeatTimesDirective } from './repeat-times.directive';
+import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -24,14 +29,16 @@ import { HighlightDirective } from './highlight.directive';
   imports: [RouterOutlet,profileComponents,hostcomponents,countercomponent,CommonModule,
             GetterinputComponent,PanelComponent,CardComponent,HoverClikComponent,
             LifecycleComponent,CheckedlifecycleComponent,BindingComponent,
-            ControlflowComponent,gridpipe,lengthpipe,isactiveheroPipe,HighlightDirective
+            ControlflowComponent,gridpipe,lengthpipe,isactiveheroPipe,HighlightDirective,HaspermissionDirective,DynamiclistDirective,
+            ShowifDirective,RepeatTimesDirective,FormsModule
           ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  isvisible=true;
   headertitle:string = 'angular';
-  count:number=25;
+  count:number=5;
   title:{name:string} = {name:" Learn Angular basics"}
   receivedDataFromChild:number=0
   receivedStringFromChild='';
@@ -44,6 +51,7 @@ export class AppComponent {
     {name:"Kumar",age:25,isactive:false},
     {name:"Sundar",age:28,isactive:true}
   ]);
+  emptylist=[{name:"Marimuthu"},{name:"Kumar"},{name:"Sundar"}];
 
   svgcolor='rgb(255,0,0)';
   dataReceived(data:number){

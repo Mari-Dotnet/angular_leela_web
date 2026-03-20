@@ -209,5 +209,17 @@ form reference variables : used in form to access the form value and form state 
 <div>build in structural directives 'if, for, switch' </div>
 -->
 
+<!--custom attribute directive eg
 <p appHighlight="yellow" defaultColor="blue">This is angular 18</p>
 <p ngNonBindable>{{1+1}}</p>
+-->
+<!-- custom structural directive eg 
+Dom rendring based on condition and dyanmic content rendering
+how to define custom structural directive : use * before the directive name
+-->
+<div *appHaspermission="'admin'">This content is only visible to users with the 'admin' permission.</div>
+<div *appDynamiclist="emptylist; let item=$implicit">{{ item.name }}</div>
+<div *appShowif="isvisible">This content is only visible when the condition is true.</div>
+<button (click)="isvisible = !isvisible">Toggle</button>
+<p *appRepeatTimes="count; let i =index">This content is repeated {{ i }} times.</p>
+<input type="number" [(ngModel)]="count" placeholder="Enter number of times to repeat"/>
