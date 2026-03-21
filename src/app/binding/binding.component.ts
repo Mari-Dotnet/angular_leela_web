@@ -1,19 +1,20 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
+import { LoggerService } from '../logger.service';
 
 @Component({
   selector: 'app-binding',
   standalone: true,
   imports: [],
   templateUrl: './binding.component.html',
-  styleUrl: './binding.component.css'
+  styleUrl: './binding.component.css',
+  providers:[LoggerService]
 })
 export class BindingComponent {
+  private logger= inject(LoggerService);
 @Input() size=0;
 @Output() sizeChange = new EventEmitter<number>();
 isDisabled: boolean = true;
-constructor() {
-  
-}
+//constructor(private logger: LoggerService) {}
 checkname(event:MouseEvent) {
   console.log("check event name",event);
 }

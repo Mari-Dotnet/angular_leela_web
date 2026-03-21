@@ -24,6 +24,7 @@ import { RepeatTimesDirective } from './repeat-times.directive';
 import { FormsModule, NgForm } from '@angular/forms';
 import { Animal, IsDogDirectiveDirective } from './is-dog-directive.directive';
 import { DemodirectiveDirective, demourl } from './demodirective.directive';
+import { DependencyComponent } from './dependency/dependency.component';
 
 @Component({
   selector: 'app-root',
@@ -33,6 +34,7 @@ import { DemodirectiveDirective, demourl } from './demodirective.directive';
             LifecycleComponent,CheckedlifecycleComponent,BindingComponent,
             ControlflowComponent,gridpipe,lengthpipe,isactiveheroPipe,HighlightDirective,HaspermissionDirective,DynamiclistDirective,
             ShowifDirective,RepeatTimesDirective,FormsModule,IsDogDirectiveDirective,DemodirectiveDirective
+            ,DependencyComponent
           ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

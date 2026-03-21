@@ -226,7 +226,7 @@ how to define custom structural directive : use * before the directive name
 
 -->
 <!--Type checking ng template gurd
--->
+
 <div *appIsDog="animal">{{animal | json}}</div>
 
 <div *appdemo="demostring; url:demourlmodel, let version; let demo=demo ; let url=url">
@@ -234,3 +234,19 @@ how to define custom structural directive : use * before the directive name
  <div>the  demo is  {{demo}}</div>
  <div>{{url.url}}</div>
 </div>
+-->
+<!--Dependecny Injection
+its need Injectable decocater its come from @angular/core
+    Main Role: Dependecny consumer and dependecny provider
+    dependecny consumer: its used to consume the dependecny in the component
+dependecny provider: its used to provide the dependecny in the component
+    Root level:  providedIn: 'root' (mentioned in service file)
+    applocation level: providers:[LoggerService] (mentioned in app.config.ts file)
+    Component level: providers:[LoggerService] (mentioned in component file)
+mainly 3 type of dependecny injection
+1. constructor injection : its used to inject the service in the component using constructor 
+    constructor(private logger: LoggerService)
+2. property injection : its used to inject the service in the component using @inject decorator
+      private logger= inject(LoggerService);
+-->
+<app-dependency></app-dependency>
