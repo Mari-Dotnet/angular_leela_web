@@ -26,6 +26,7 @@ import { Animal, IsDogDirectiveDirective } from './is-dog-directive.directive';
 import { DemodirectiveDirective, demourl } from './demodirective.directive';
 import { DependencyComponent } from './dependency/dependency.component';
 import { DependencyUseValueExistComponent } from './dependency-use-value-exist/dependency-use-value-exist.component';
+import { TeamComponent } from './team/team.component';
 
 @Component({
   selector: 'app-root',
@@ -35,7 +36,7 @@ import { DependencyUseValueExistComponent } from './dependency-use-value-exist/d
             LifecycleComponent,CheckedlifecycleComponent,BindingComponent,
             ControlflowComponent,gridpipe,lengthpipe,isactiveheroPipe,HighlightDirective,HaspermissionDirective,DynamiclistDirective,
             ShowifDirective,RepeatTimesDirective,FormsModule,IsDogDirectiveDirective,DemodirectiveDirective
-            ,DependencyComponent,DependencyUseValueExistComponent
+            ,DependencyComponent,DependencyUseValueExistComponent,TeamComponent
           ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
