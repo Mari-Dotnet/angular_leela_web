@@ -25,6 +25,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { Animal, IsDogDirectiveDirective } from './is-dog-directive.directive';
 import { DemodirectiveDirective, demourl } from './demodirective.directive';
 import { DependencyComponent } from './dependency/dependency.component';
+import { DependencyUseValueExistComponent } from './dependency-use-value-exist/dependency-use-value-exist.component';
 
 @Component({
   selector: 'app-root',
@@ -34,7 +35,7 @@ import { DependencyComponent } from './dependency/dependency.component';
             LifecycleComponent,CheckedlifecycleComponent,BindingComponent,
             ControlflowComponent,gridpipe,lengthpipe,isactiveheroPipe,HighlightDirective,HaspermissionDirective,DynamiclistDirective,
             ShowifDirective,RepeatTimesDirective,FormsModule,IsDogDirectiveDirective,DemodirectiveDirective
-            ,DependencyComponent
+            ,DependencyComponent,DependencyUseValueExistComponent
           ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

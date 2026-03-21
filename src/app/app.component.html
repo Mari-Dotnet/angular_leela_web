@@ -248,5 +248,16 @@ mainly 3 type of dependecny injection
     constructor(private logger: LoggerService)
 2. property injection : its used to inject the service in the component using @inject decorator
       private logger= inject(LoggerService);
+
+      <app-dependency></app-dependency>
 -->
-<app-dependency></app-dependency>
+
+<!-- DI use value and use existing
+[{provide: MainService, useExisting: ExperimentService}]
+usevalue is directly provide the value to the serive like useValue: {name:"mari",age:29} but useExisting is provide the value from other service like useExisting: ExperimentService
+in above scenario instance of MainService and ExperimentService is same because we use useExisting 
+and both service have same instance 
+but if we use useValue then both service have different instance because we use useValue 
+-->
+ <app-dependency-use-value-exist></app-dependency-use-value-exist>
+
