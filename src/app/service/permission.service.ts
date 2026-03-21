@@ -11,7 +11,5 @@ export class PermissionService {
    }
 }
 
-export const UserToken = {
-    permission:["team:1","team:2","team:3"]
-};
+
 
