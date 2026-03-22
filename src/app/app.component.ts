@@ -27,6 +27,8 @@ import { DemodirectiveDirective, demourl } from './demodirective.directive';
 import { DependencyComponent } from './dependency/dependency.component';
 import { DependencyUseValueExistComponent } from './dependency-use-value-exist/dependency-use-value-exist.component';
 import { TeamComponent } from './team/team.component';
+import { ParentdiComponent } from './parentdi/parentdi.component';
+import { ChilddiComponent } from './childdi/childdi.component';
 
 @Component({
   selector: 'app-root',
@@ -36,7 +38,8 @@ import { TeamComponent } from './team/team.component';
             LifecycleComponent,CheckedlifecycleComponent,BindingComponent,
             ControlflowComponent,gridpipe,lengthpipe,isactiveheroPipe,HighlightDirective,HaspermissionDirective,DynamiclistDirective,
             ShowifDirective,RepeatTimesDirective,FormsModule,IsDogDirectiveDirective,DemodirectiveDirective
-            ,DependencyComponent,DependencyUseValueExistComponent,TeamComponent
+            ,DependencyComponent,DependencyUseValueExistComponent,TeamComponent,
+            ParentdiComponent,ChilddiComponent
           ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

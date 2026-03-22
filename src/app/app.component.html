@@ -261,7 +261,22 @@ but if we use useValue then both service have different instance because we use 
  
 <app-dependency-use-value-exist></app-dependency-use-value-exist>
 -->
+<!-- DI use factory 
 <p>Hi this is home page</p>
 <router-outlet></router-outlet>
 <app-team></app-team>
+-->
 
+<!-- DI: Optional 
+ optional:
+in service file Injectable not mentioned as root level
+in case id we use that component on component level we can mention @Optional()  then we can mention on service
+constructor(@Optional() private parentchildservice: ParentChildService) in this case it will return null
+No need to mention on selector level providers : []
+
+self:
+Selector level providers : [] is empty and you mention service below then error is occur
+because self only look for the service in the current component 
+@Self() private myservice: ParentChildService
+-->
+<app-parentdi></app-parentdi>
